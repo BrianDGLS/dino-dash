@@ -4,6 +4,10 @@ export class Timer {
     protected current = 0
     protected previous = 0
 
+    constructor() {
+        this.update()
+    }
+
     public hasPassed(milliseconds: number): boolean {
         this.update()
         return this.millisecondsElapsed >= milliseconds
